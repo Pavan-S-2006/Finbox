@@ -1,5 +1,9 @@
 
-import serviceAccount from './spartan-card-483210-r5-d7d3de109d48.json';
+// Google Service Account credentials (optional - comment out if not available)
+// import serviceAccount from './spartan-card-483210-r5-d7d3de109d48.json';
+
+// For demo purposes, we'll use mock/simulated responses when credentials aren't available
+const GOOGLE_AI_ENABLED = false; // Set to true when you have valid credentials
 
 // --- Authentication Logic ---
 
@@ -33,7 +37,7 @@ const importPrivateKey = async (pem) => {
     );
 };
 
-const createJWT = async () => {
+const createJWT = async (serviceAccount) => {
     const header = {
         alg: 'RS256',
         typ: 'JWT'
@@ -71,13 +75,13 @@ const createJWT = async () => {
 let cachedToken = null;
 let tokenExpiry = 0;
 
-const getAccessToken = async () => {
+const getAccessToken = async (serviceAccount) => {
     if (cachedToken && Date.now() < tokenExpiry) {
         return cachedToken;
     }
 
     try {
-        const jwt = await createJWT();
+        const jwt = await createJWT(serviceAccount);
 
         const response = await fetch(serviceAccount.token_uri, {
             method: 'POST',
@@ -107,6 +111,17 @@ const getAccessToken = async () => {
 // --- API Wrappers ---
 
 export const transcribeAudio = async (audioBlob) => {
+    // Return mock data if Google AI is not enabled
+    if (!GOOGLE_AI_ENABLED) {
+        console.log('Google AI not enabled, returning mock transcription');
+        return new Promise((resolve) => {
+            // Simulate API delay
+            setTimeout(() => {
+                resolve("Spent $50 on groceries at Walmart today");
+            }, 500);
+        });
+    }
+
     // Convert blob to base64
     const reader = new FileReader();
     return new Promise((resolve, reject) => {
@@ -159,6 +174,21 @@ export const transcribeAudio = async (audioBlob) => {
 };
 
 export const analyzeImage = async (imageFile) => {
+    // Return mock data if Google AI is not enabled
+    if (!GOOGLE_AI_ENABLED) {
+        console.log('Google AI not enabled, returning mock image analysis');
+        return new Promise((resolve) => {
+            // Simulate API delay
+            setTimeout(() => {
+                resolve({
+                    text: "Receipt\nWalmart Supercenter\nTotal: $125.50\nDate: " + new Date().toLocaleDateString(),
+                    blocks: [],
+                    annotations: []
+                });
+            }, 500);
+        });
+    }
+
     const reader = new FileReader();
     return new Promise((resolve, reject) => {
         reader.readAsDataURL(imageFile);

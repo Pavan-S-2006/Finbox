@@ -37,7 +37,7 @@ function AppContent() {
       <div className="min-h-screen flex items-center justify-center bg-white transition-colors duration-300">
         <div className="text-center">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyber-600 to-purple-600 mx-auto mb-4 animate-pulse"></div>
-          <p className="text-gray-500">Loading FinanceVault...</p>
+          <p className="text-gray-500">Loading FinBox...</p>
         </div>
       </div>
     );
@@ -84,7 +84,7 @@ function AppContent() {
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
 
       {/* Main Content Area */}
-      <div className={`min-h-screen flex flex-col transition-all duration-300 ${sidebarOpen ? 'md:ml-64' : 'md:ml-20'}`}>
+      <div className={`min-h-screen flex flex-col transition-all duration-300 ${sidebarOpen ? 'md:ml-[280px]' : 'md:ml-[80px]'}`}>
         <TopBar />
 
         <main className="flex-1 p-4 md:p-8 overflow-x-hidden pb-24 md:pb-8">

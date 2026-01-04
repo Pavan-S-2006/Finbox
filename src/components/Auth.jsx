@@ -5,7 +5,7 @@ import { useTheme } from '../context/ThemeContext';
 import Login from './auth/Login';
 import Signup from './auth/Signup';
 import { Button } from "@/components/ui/button";
-import Logo from '../assets/logo.png';
+import Logo from '../assets/finbox-icon.png';
 
 const Auth = ({ onBack, initialIsLogin = true }) => {
   const { t } = useTheme();
@@ -37,8 +37,8 @@ const Auth = ({ onBack, initialIsLogin = true }) => {
           {/* Top Header */}
           <div className="relative z-10 flex justify-between items-start">
             <div className="flex items-center gap-3">
-              <img src={Logo} alt="Prospera Logo" className="w-10 h-10 rounded-full object-cover shadow-md border-2 border-white/20" />
-              <span className="font-bold text-2xl tracking-tight">Prospera</span>
+              <img src={Logo} alt="FinBox Logo" className="w-10 h-10 rounded-full object-cover shadow-md border-2 border-white/20" />
+              <span className="font-bold text-2xl tracking-tight">FinBox</span>
             </div>
 
             {onBack && (

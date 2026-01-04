@@ -3,7 +3,6 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDYaWUGVBSwPTNZYRF7iJ58Mj-unafIbA4",
   authDomain: "fintech-app-85721.firebaseapp.com",
   projectId: "fintech-app-85721",
   storageBucket: "fintech-app-85721.firebasestorage.app",
@@ -15,3 +14,4 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export default app;
+
