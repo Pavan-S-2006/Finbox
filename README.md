@@ -6,7 +6,6 @@ A proactive financial "Control Center" for the average household, focusing on ea
 
 ### 🔐 Authentication & Security
 - Secure login with email/password
-- MFA support (biometric + OTP ready)
 - Role-based family profiles (Primary, Editor, Viewer)
 - 256-bit encryption ready
 
