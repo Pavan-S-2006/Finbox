@@ -1,5 +1,4 @@
 import { useFinance } from '../context/FinanceContext';
-
 import { LogOut, User } from 'lucide-react';
 import NotificationBell from './NotificationBell';
 import { Button } from "@/components/ui/button";
@@ -14,22 +13,14 @@ import {
 const TopBar = () => {
     const { user, logout, setActiveTab } = useFinance();
 
-
     return (
-        <div className="hidden md:flex justify-between items-center h-16 px-8 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            {/* Left side - Title */}
-            <div className="flex items-center">
-                <span className="font-bold text-xl tracking-tight">FinanceVault</span>
-            </div>
-
+        <div className="hidden md:flex justify-end items-center h-16 px-8 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="flex items-center gap-4">
-
-
                 {/* Notifications */}
                 <NotificationBell onClick={() => setActiveTab('notifications')} />
 
                 {/* User Profile */}
-                <div className="flex items-center gap-3 pl-4 border-l ml-2">
+                <div className="flex items-center gap-3 pl-4 border-l">
                     <div className="text-right hidden lg:block">
                         <p className="text-sm font-medium leading-none">{user?.name || 'User'}</p>
                         <p className="text-xs text-muted-foreground">{user?.role || 'Member'}</p>

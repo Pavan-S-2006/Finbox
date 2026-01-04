@@ -1,4 +1,4 @@
-# FinanceVault - Personal Finance Manager
+# FinBox - Personal Finance Manager
 
 A proactive financial "Control Center" for the average household, focusing on ease of entry, predictive simulation, and secure family legacy.
 
