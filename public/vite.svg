@@ -1,0 +1,115 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gradient -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGradient)"/>
+  
+  <!-- Inner Glow Circle -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="url(#glowGradient)" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Upward Growth Graph Bars -->
+  <g opacity="0.9">
+    <!-- Bar 1 - Shortest -->
+    <rect x="120" y="320" width="50" height="100" rx="8" fill="url(#barGradient1)"/>
+    
+    <!-- Bar 2 - Medium -->
+    <rect x="190" y="270" width="50" height="150" rx="8" fill="url(#barGradient2)"/>
+    
+    <!-- Bar 3 - Tall -->
+    <rect x="260" y="210" width="50" height="210" rx="8" fill="url(#barGradient3)"/>
+    
+    <!-- Bar 4 - Tallest -->
+    <rect x="330" y="150" width="50" height="270" rx="8" fill="url(#barGradient4)"/>
+  </g>
+  
+  <!-- Upward Arrow Overlay -->
+  <path d="M 100 350 L 380 130" stroke="url(#arrowGradient)" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Arrow Head -->
+  <path d="M 380 130 L 350 145 L 365 175 Z" fill="url(#arrowGradient)" opacity="0.8"/>
+  
+  <!-- Connecting Line -->
+  <path d="M 100 350 L 165 295 L 215 245 L 285 185 L 355 125" 
+        stroke="url(#lineGradient)" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        fill="none"
+        opacity="0.5"/>
+  
+  <!-- Data Points -->
+  <circle cx="100" cy="350" r="8" fill="#10B981"/>
+  <circle cx="165" cy="295" r="8" fill="#14B8A6"/>
+  <circle cx="215" cy="245" r="8" fill="#06B6D4"/>
+  <circle cx="285" cy="185" r="8" fill="#3B82F6"/>
+  <circle cx="355" cy="125" r="8" fill="#8B5CF6"/>
+  
+  <!-- Target Circle (Goal Symbol) -->
+  <g opacity="0.8">
+    <circle cx="400" cy="100" r="35" fill="none" stroke="url(#targetGradient)" stroke-width="4"/>
+    <circle cx="400" cy="100" r="25" fill="none" stroke="url(#targetGradient)" stroke-width="3"/>
+    <circle cx="400" cy="100" r="15" fill="url(#targetGradient)"/>
+  </g>
+  
+  <!-- Subtle Shimmer Effect -->
+  <path d="M 150 100 L 200 150 L 150 200" 
+        stroke="white" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        fill="none"
+        opacity="0.15"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow Gradient -->
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Bar Gradients -->
+    <linearGradient id="barGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="barGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="barGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="barGradient4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Arrow Gradient -->
+    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Line Gradient -->
+    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Target Gradient -->
+    <linearGradient id="targetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

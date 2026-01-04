@@ -1,0 +1,1 @@
+import{t as e}from"./index-B5rwAcSL.js";export{e as legacyService};
